@@ -18,7 +18,7 @@
         {
             String texto = EditorSalvar.Text;
 
-            File.WriteAllText(filepath,texto);
+            File.WriteAllText(filepath,texto);//
             DisplayAlert("Salvo", "Seu Arquivo foi salvo", "ok");
             
 
@@ -27,10 +27,11 @@
 
         private void DeleteButton_Clicked(object sender, EventArgs e)
         {
+            
 
             if (File.Exists(filepath))
             {
-                File.Delete(filepath);
+                File.Delete(filepath); //Deleta arquivo
                 DisplayAlert("Operação concluida", "Arquivo deletado com Sucesso", "Ok");
                 EditorSalvar.Text = null;
             }
